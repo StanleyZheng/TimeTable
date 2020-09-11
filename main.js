@@ -38,28 +38,40 @@ $(function () {
         counter -= 1
     });
 
+
+    //fill in table
+    var data = [
+        ['', 'Tesla', 'Volvo', 'Toyota', 'Ford'],
+        ['2019', 10, 11, 12, 13],
+        ['2020', 20, 11, 14, 13],
+        ['2021', 30, 15, 12, 13]
+    ];
+
     $("#submit").on("click", function (event) {
         event.preventDefault();
+        const container1 = document.getElementById('table1');
+        const container2 = document.getElementById('table2');
+        
+        $('#table1').empty();
+        $('#table2').empty();
 
-        //fill in table
-        const data = [
-          ['', 'Tesla', 'Volvo', 'Toyota', 'Ford'],
-          ['2019', 10, 11, 12, 13],
-          ['2020', 20, 11, 14, 13],
-          ['2021', 30, 15, 12, 13]
-        ];
-
-        const container = $('#example');
-        const hot = new Handsontable(container, {
-          data: data,
-          rowHeaders: true,
-          colHeaders: true,
-          licenseKey: 'non-commercial-and-evaluation'
+        const hot1 = new Handsontable(container1, {
+            data: data,
+            rowHeaders: true,
+            colHeaders: ['Apple','B','C','D','E'],
+            licenseKey: 'non-commercial-and-evaluation'
         });
 
-        hot.updateSettings({
-          colHeaders: ['Apple','B','C','D','E']
+        const hot2 = new Handsontable(container2, {
+            data: data,
+            rowHeaders: true,
+            colHeaders: ['a','b','c','d','e'],
+            licenseKey: 'non-commercial-and-evaluation'
         });
+
+        // hot.updateSettings({
+        //   colHeaders: ['Apple','B','C','D','E']
+        // });
     });
 
 
