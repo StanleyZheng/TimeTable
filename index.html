@@ -15,88 +15,90 @@
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/js/uikit.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/js/uikit-icons.min.js"></script>
 
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- Latest compiled JavaScript -->
+
+  <!-- BootStrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+  <!-- Handson Table -->
+  <script src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css">
 
-  <!-- local CSS / JS -->
-  <link rel="stylesheet" href="main.css">
-  <script src="main.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
 </head>
 
 
 
 <body class="uk-height-1-1">
 
-  <div class="uk-child-width-1-1@s " uk-grid>
 
-    <div>
-        <div class="uk-card uk-card-default uk-card-body">
-            <div class="container text-center text-white">
-                <h1 class="display-4">Product Management Scheduling Table</h1>
-            </div>
+    
+    <div class="uk-child-width-1-1" uk-grid>
+        <div class="uk-section uk-margin-auto" style="background-color: #82D8F6;">
+            <div class="uk-card uk-card-default uk-card-body uk-width-5-6 uk-align-center">
+                <div class="uk-container uk-text-center">
+                    <h1 class="display-4">Project Management Scheduling Table</h1>
+                </div>
 
-            <div class="container uk-align-center">
-                <div class="row">
-                    <div class="col-lg-7 mx-auto">
-                        <div class="card rounded-0 border-0 shadow">
-                            <div class="card-body p-5">
-                                
-                                <!--  Bootstrap table-->
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">First</th>
-                                                <th scope="col">Last</th>
-                                                <th scope="col">Handle</th>
-                                                <th scope="col"></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td>@mdo</td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>Jacob</td>
-                                                <td>Thornton</td>
-                                                <td>@fat</td>
-                                                <td></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                <div class="container uk-align-center">
+                    
+                    <!--  Bootstrap table-->
+                    <div class="table-responsive">
+                        <table id="toptable" class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-                                <!-- Add rows button-->
-                                <a class="btn btn-primary rounded-0 btn-block" id="insertRow" href="#">Add new row</a>
-                            </div>
-                        </div>
+                    <!-- Add rows button-->
+
+                    <div class="uk-flex uk-flex-center uk-width-1-1" uk-grid>
+                        <div class="uk-width-expand"><a class="btn btn-primary rounded-0 btn-block" id="insertRow" href="#">Add new row</a></div>
+                        <div class="uk-width-expand"><a class="btn btn-primary rounded-0 btn-block" id="submit" href="#">Submit</a></div>
                     </div>
                 </div>
             </div>
 
+            <div class="uk-card uk-card-default uk-card-body uk-width-5-6 uk-align-center">
+                <div class="uk-flex uk-flex-center">
+                    <div id="example"></div>
+                </div>
+            </div>
         </div>
     </div>
 
 </div>
 
 
-
-
-
-
-
+  <!-- local CSS / JS -->
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js"></script>
 </body>
 </html>
 

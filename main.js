@@ -1,3 +1,9 @@
+//Main.js
+
+
+
+
+
 $(function () {
 
     // Start counting from the third row
@@ -20,15 +26,42 @@ $(function () {
         newRow.append(cols);
 
         // Insert the row inside a table
-        $("table").append(newRow);
+        $("#toptable").append(newRow);
 
         // Increase counter after each row insertion
         counter++;
     });
 
     // Remove row when delete btn is clicked
-    $("table").on("click", "#deleteRow", function (event) {
+    $("#toptable").on("click", "#deleteRow", function (event) {
         $(this).closest("tr").remove();
         counter -= 1
     });
+
+    $("#submit").on("click", function (event) {
+        event.preventDefault();
+
+        //fill in table
+        const data = [
+          ['', 'Tesla', 'Volvo', 'Toyota', 'Ford'],
+          ['2019', 10, 11, 12, 13],
+          ['2020', 20, 11, 14, 13],
+          ['2021', 30, 15, 12, 13]
+        ];
+
+        const container = $('#example');
+        const hot = new Handsontable(container, {
+          data: data,
+          rowHeaders: true,
+          colHeaders: true,
+          licenseKey: 'non-commercial-and-evaluation'
+        });
+
+        hot.updateSettings({
+          colHeaders: ['Apple','B','C','D','E']
+        });
+    });
+
+
+
 });
